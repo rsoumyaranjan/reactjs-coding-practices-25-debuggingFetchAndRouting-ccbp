@@ -16,6 +16,7 @@ class BlogItemDetails extends Component {
     const {params} = match
     const {id} = params
 
+    // FIX18: The API call for the individual blog details should be done using the blog id as a path parameter in the apiUrl
     const response = await fetch(`https://apis.ccbp.in/blogs/${id}`)
     const data = await response.json()
     const updatedData = {
@@ -52,6 +53,7 @@ class BlogItemDetails extends Component {
     return (
       <div className="blog-container">
         {isLoading ? (
+          // eslint-disable-next-line react/no-unknown-property
           <div testid="loader">
             <Loader type="TailSpin" color="#00bfff" height={50} width={50} />
           </div>

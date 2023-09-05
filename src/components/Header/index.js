@@ -15,12 +15,19 @@ const Header = () => (
     <ul className="nav-items-list">
       <li className="link-item">
         <Link className="route-link" to="/">
+          {/* FIX8: The text for the path "/" should be Home */}
           Home
         </Link>
+      </li>
+      <li className="link-item">
         <Link className="route-link" to="/about">
+          {/* FIX9: The text for the path "/about" should be About */}
           About
         </Link>
+      </li>
+      <li className="link-item">
         <Link className="route-link" to="/contact">
+          {/* FIX10: The text for the path "/contact" should be Contact */}
           Contact
         </Link>
       </li>
